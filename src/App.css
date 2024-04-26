@@ -1,0 +1,34 @@
+.Auth-container{
+  background-image: url(./assets/images/auth-bg.png);
+}
+
+.bg-overlay{
+  background: linear-gradient(rgba(47,140,96,0.4),rgba(0,0,0,0.7));
+}
+
+.Auth-container .logo{
+
+
+}
+
+.sidebar-container .ps-sidebar-container{
+  height: 100vh;
+  background-color: rgba(31, 38, 62, 1);
+  color: white;
+}
+.sidebar-container .ps-sidebar-container .ps-menu-button:hover{
+  background-color: rgba(47, 140 ,96, 0.4);
+}
+
+.notf{
+  background-image: url(./assets/images/not-found-bg.png);
+  background-size: 100% 100% ;
+ height: 100vh;
+}
+
+.larger{
+  font-size: 70px;
+}
+.back{
+  width: 200px;
+}
