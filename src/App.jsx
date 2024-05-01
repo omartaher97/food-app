@@ -13,6 +13,7 @@ import Categorieslist from "./modules/Categories/Components/Categorieslist/Categ
 import Userslist from "./modules/Users/Components/Userslist/Userslist";
 import { useEffect, useState } from "react";
 import { jwtDecode } from "jwt-decode";
+import Changepass from "./modules/Authentication/Components/Changepass/Changepass";
 
 function App() {
 
@@ -42,14 +43,16 @@ function App() {
         {path:'register',element:<Register/>},
         {path:'forgetpass',element:<Forgetpass/>},
         {path:'resetpass',element:<Resetpass/>},
+        {path:'changepass',element:<Changepass/>},
       ],
     },
     {
       path: "Dashboard",
-      element: <Masterlayout />,
+      element: <Masterlayout loginData={loginData} />,
       errorElement: <Notfound />,
       children: [
         {index: true,element:<Dashboard/>},
+        {path: 'Dashboard',element:<Dashboard/>},
         {path:'recipes',element:<Recipestlist/>},
         {path:'categories',element:<Categorieslist/>},
         {path:'users',element:<Userslist/>},

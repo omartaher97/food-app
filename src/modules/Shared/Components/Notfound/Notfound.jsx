@@ -1,6 +1,9 @@
 import React from "react";
 import logo from "../../../../assets/images/logo.png";
+import { useNavigate } from "react-router-dom";
 export default function Notfound() {
+
+  let navigate=useNavigate();
   return (
     <>
       <div className="container-fluid notf ">
@@ -13,7 +16,7 @@ export default function Notfound() {
         <p>
           This Page doesn’t exist or was removed! We suggest you back to home.
         </p>
-        <button className="btn btn-success back"> <i class="fa-solid fa-arrow-left"></i> Back To Home</button>
+        <button  className="btn btn-success back"> <i class="fa-solid fa-arrow-left"></i> Back To Home</button>
         </div>
 
         </div>

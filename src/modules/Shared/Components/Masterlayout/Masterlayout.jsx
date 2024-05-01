@@ -4,7 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import Header from "../Header/Header";
 import { Outlet } from "react-router-dom";
 
-export default function Masterlayout() {
+export default function Masterlayout({loginData}) {
   return (
     <div className="container-fluid">
       <div className="d-flex">
@@ -16,8 +16,7 @@ export default function Masterlayout() {
        
         
           <div className="w-100">
-            <Navbar/>
-            <Header/>
+            <Navbar loginData={loginData}/>
             <Outlet/>
           </div>
         

@@ -6,10 +6,7 @@
   background: linear-gradient(rgba(47,140,96,0.4),rgba(0,0,0,0.7));
 }
 
-.Auth-container .logo{
 
-
-}
 
 .sidebar-container .ps-sidebar-container{
   height: 100vh;
@@ -22,8 +19,10 @@
 
 .notf{
   background-image: url(./assets/images/not-found-bg.png);
-  background-size: 100% 100% ;
+  background-position: center right;
  height: 100vh;
+ background-size: contain;
+ background-repeat: no-repeat;
 }
 
 .larger{
@@ -31,4 +30,13 @@
 }
 .back{
   width: 200px;
+}
+
+.header-container{
+background-image: url(./assets/images/header-bg-svg.svg);
+background-size: cover;
+background-repeat: no-repeat;
+color: white;
+
+
 }
