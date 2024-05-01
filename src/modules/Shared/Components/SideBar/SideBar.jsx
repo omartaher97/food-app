@@ -31,21 +31,21 @@ export default function SideBar() {
               Home
             </MenuItem>
             <MenuItem
-              icon={<i class="fa-solid fa-user"></i>}
+              icon={<i className="fa-solid fa-user"></i>}
               component={<Link to="/dashboard/users" />}
             >
               {" "}
               Users
             </MenuItem>
             <MenuItem
-              icon={<i class="fa-solid fa-receipt"></i>}
+              icon={<i className="fa-solid fa-receipt"></i>}
               component={<Link to="/dashboard/recipes" />}
             >
               {" "}
               Recipes
             </MenuItem>
             <MenuItem
-              icon={<i class="fa fa-list-alt" aria-hidden="true"></i>}
+              icon={<i className="fa fa-list-alt" aria-hidden="true"></i>}
               component={<Link to="/dashboard/categories" />}
             >
               {" "}
@@ -54,13 +54,13 @@ export default function SideBar() {
               
 
             <MenuItem
-             icon={<i class="fa fa-key" aria-hidden="true"></i>}
+             icon={<i className="fa fa-key" aria-hidden="true"></i>}
              component={<Link to="/changepass" />}
             > Change password</MenuItem>
 
 
             <MenuItem
-             icon={<i class="fa fa-sign-out" aria-hidden="true"></i>}
+             icon={<i className="fa fa-sign-out" aria-hidden="true"></i>}
              component={<Link to="/login" />}
             > Logout</MenuItem>
           </Menu>
