@@ -12,6 +12,7 @@ import Deletedata from "../../../Shared/Components/Deletedata/Deletedata";
 
 export default function Categorieslist() {
 
+
 const [Categorieslist, setCategorieslist] = useState([]);
 
 const [show, setShow] = useState(false);
@@ -34,9 +35,11 @@ const [deleteshow, setdeleteShow] = useState(false);
 const [Updateshow, setUpdateShow] = useState(false);
 
   const handleUpdateClose = () => setUpdateShow(false);
-  const handleUpdateShow = (id) => {
+  const handleUpdateShow = (id,name) => {
     setUpdateShow(true);
     setcatId(id);
+    setValue("name", name);
+    setcategoryName(name);
   }
 
   const [categoryName, setcategoryName] = useState(" ")
@@ -49,13 +52,8 @@ const [Updateshow, setUpdateShow] = useState(false);
     register,
     handleSubmit,
     formState:{errors},
-  }=useForm({
-    defaultValues: {
-
-      name: `${categoryName}`,
-     
-    },
-  } );
+    setValue,
+  }=useForm( );
 
   
   const onSubmit= async(data)=>{
@@ -120,10 +118,10 @@ const onUpdate= async(data)=>{
     handleUpdateClose();
     getCategoriesList();
     console.log(response);
-    setcategoryName(response.data.name)
+ 
   } catch (error) {
     toast.error(error.response.data.message);
-    console.log(error);
+   
   }
 
 
@@ -191,7 +189,7 @@ useEffect(() => {
             <form onSubmit={handleSubmit(onUpdate)}>
                 <div className="input-group mb-3 py-4">
                  
-                  <input type="text" className="form-control" placeholder="Update Category  " 
+                  <input type="text" className="form-control" placeholder="Update Category   " 
                   {...register("name",
                   {required:'Name is required',
                 
@@ -260,8 +258,8 @@ useEffect(() => {
           <td>{Category.name}</td>
           <td>{Category.creationDate}</td>
           <td>
-             <i onClick={()=>handleUpdateShow(Category.id)} className="fas fa-edit mx-3 text-info  "></i>
-             <i onClick={()=>handledeleteShow(Category.id)} className="fa fa-trash text-danger" aria-hidden="true"></i>
+             <i onClick={()=>handleUpdateShow(Category.id,Category.name)} className="fas fa-edit mx-3 text-info cursor-pointer "></i>
+             <i onClick={()=>handledeleteShow(Category.id)} className="fa fa-trash text-danger cursor-pointer" aria-hidden="true"></i>
           </td>
         </tr>):<Nodata/>}
   
